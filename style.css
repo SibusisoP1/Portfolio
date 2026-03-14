@@ -19,9 +19,6 @@
  * Base structure
  */
 
-body {
-}
-
 /*
  * Header
  */
@@ -135,4 +132,9 @@ body {
 }
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
+}
+
+/* project section */
+.game {
+  height: 231.88px;
 }
