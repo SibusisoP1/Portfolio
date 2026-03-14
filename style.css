@@ -7,6 +7,109 @@
   box-sizing: border-box;
 }
 
+/* CSS Variables for colors */
+:root {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-light: #ffffff;
+  --border-color: #dee2e6;
+  --header-bg: rgba(0, 0, 0, 0.8);
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* Auto dark mode using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-light: #ffffff;
+    --border-color: #333333;
+    --header-bg: rgba(0, 0, 0, 0.9);
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Apply CSS variables to cards and sections */
+.card {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.card-body {
+  color: var(--text-primary);
+}
+
+section {
+  background-color: var(--bg-primary);
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  color: var(--text-primary);
+}
+
+section p,
+section li {
+  color: var(--text-primary);
+}
+
+mark {
+  background-color: #fff3cd;
+  color: #000;
+}
+
+/* Dark mode mark styling */
+@media (prefers-color-scheme: dark) {
+  mark {
+    background-color: var(--text-secondary);
+    color: var(--text-light);
+  }
+}
+
+.badge {
+  background-color: var(--text-secondary) !important;
+  color: var(--text-light) !important;
+}
+
+/* Dark mode badge styling */
+@media (prefers-color-scheme: dark) {
+  .badge {
+    background-color: #6c757d !important;
+    color: #000000 !important;
+  }
+}
+
+/* Fix button visibility in dark mode */
+.btn-outline-dark {
+  border-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--text-primary) !important;
+  color: var(--bg-secondary) !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0b5ed7 !important;
+  color: #ffffff !important;
+}
+
 /* Custom default button */
 .btn-light,
 .btn-light:hover,
@@ -23,6 +126,10 @@
  * Header
  */
 
+header {
+  background: var(--header-bg);
+}
+
 .banner-wrap {
   background-image: url(./assets/banner.jpg);
   background-size: cover;
@@ -31,12 +138,12 @@
   position: relative;
   z-index: 1;
 }
+
 .overlay {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: black;
-  opacity: 70%;
+  background: var(--overlay-bg);
   position: absolute;
   top: 0;
 }
