@@ -25,5 +25,8 @@ Email Address, Name, Subject, Message, and Submit button.
 5. Footer section:
    with my name
 
+**Bonus**
+Auto dark mode
+
 **Image credit**
 Project images for Zaio platform and Ai generated images also

@@ -75,14 +75,14 @@ mark {
 }
 
 .badge {
-  background-color: var(--text-secondary) !important;
-  color: var(--text-light) !important;
+  background-color: #212529 !important;
+  color: #ffffff !important;
 }
 
 /* Dark mode badge styling */
 @media (prefers-color-scheme: dark) {
   .badge {
-    background-color: #6c757d !important;
+    background-color: white !important;
     color: #000000 !important;
   }
 }
